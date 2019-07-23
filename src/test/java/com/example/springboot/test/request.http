@@ -1,0 +1,44 @@
+POST http://localhost:8080/demo HTTP/1.1
+content-type: application/json
+
+{
+    "codigo": "124",
+    "marca": "Ford",
+    "anioDeFabricación": 1990
+}
+
+####
+GET http://localhost:8080/demo/findAll HTTP/1.1
+
+####
+GET http://localhost:8080/demo/findByCodigo/124 HTTP/1.1
+
+####
+GET http://localhost:8080/demo/findByCodigo/124 HTTP/1.1
+
+
+###
+POST http://localhost:8080/cliente/  HTTP/1.1
+content-type: application/json
+
+{
+    "codigo": "12323",
+    "apellido": "Castas",
+    "nombre":"Juan",
+    "numeroDeCuenta": "C-223123-31"
+}
+
+
+###
+POST http://localhost:8080/factura/  HTTP/1.1
+content-type: application/json
+
+{
+    "fecha": "2018-01-01",
+    "numero": "1",
+    "idCliente":1,
+    "detallesDTO":[
+        {"id_producto":1,"cantidad":3},
+     {"id_producto":2,"cantidad":3}
+    ]
+}
