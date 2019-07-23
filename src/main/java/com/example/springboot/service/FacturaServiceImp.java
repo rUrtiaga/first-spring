@@ -35,7 +35,7 @@ public class FacturaServiceImp implements FacturaService {
 		facturaDTO.getDetallesDTO().stream().forEach(detalleDTO -> {
 			productosConCantidad.add(Pair.of(productoRepository.findById(detalleDTO.getId_producto()).get(),detalleDTO.getCantidad()));});
 		//creo la factura Modelo
-		factura = new Factura(cliente,productosConCantidad,facturaDTO.getFecha());
+		factura = new Factura(cliente,productosConCantidad,facturaDTO.getFecha(),facturaDTO.getNumero());
 		this.facturaRepository.save(factura);
 				
 		return null;

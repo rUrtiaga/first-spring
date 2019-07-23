@@ -34,11 +34,10 @@ POST http://localhost:8080/factura/  HTTP/1.1
 content-type: application/json
 
 {
-    "fecha": "2018-01-01",
-    "numero": "1",
+    "fecha": "2018-01-02",
+    "numero": 3,
     "idCliente":1,
     "detallesDTO":[
-        {"id_producto":1,"cantidad":3},
-     {"id_producto":2,"cantidad":3}
+        {"id_producto":1,"cantidad":3}
     ]
 }

@@ -53,16 +53,18 @@ public class Factura {
 	}
 	
 	
-	public Factura(Cliente cliente, ArrayList<Entry<Producto, Integer>> productosConCantidad) {
+	public Factura(Cliente cliente, ArrayList<Entry<Producto, Integer>> productosConCantidad, int numero) {
 		this.setCliente(cliente);
 		this.productosToDetallles(productosConCantidad);
 		this.setFecha(LocalDate.now());
+		this.setNumero(numero);
 	}
 	
-	public Factura(Cliente cliente, ArrayList<Entry<Producto, Integer>> productosConCantidad, LocalDate fecha) {
+	public Factura(Cliente cliente, ArrayList<Entry<Producto, Integer>> productosConCantidad, LocalDate fecha, int numero) {
 		this.setCliente(cliente);
 		this.productosToDetallles(productosConCantidad);
 		this.setFecha(fecha);
+		this.setNumero(numero);
 	}
 	
 	

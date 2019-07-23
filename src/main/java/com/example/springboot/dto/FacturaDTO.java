@@ -27,14 +27,6 @@ public class FacturaDTO {
 		this.detallesDTO = this.detallesToDTO(factura.getDetalles());
 	}
 
-
-	///TODO FIX
-//	private List<Detalle> detallesDTOToDetalles(List<DetalleDTO> detallesDTO) {
-//		return detallesDTO.stream().map(detalle -> {
-//			return new Detalle(factura,);
-//		}).collect(Collectors.toList());
-//	}
-
 	
 	private List<DetalleDTO> detallesToDTO(List<Detalle> detalles) {
 		return detalles.stream().map(detalle -> {
@@ -81,21 +73,4 @@ public class FacturaDTO {
 	public void setDetallesDTO(List<DetalleDTO> detallesDTO) {
 		this.detallesDTO = detallesDTO;
 	}
-
-//	RAMIRO KESADA PONS artista, 
-	
-//	public ArrayList<Entry<Long, Integer>> detallesDTOtoEntry() {
-//		return this.detallesDTO.stream().map(detalleDTO -> {
-//			return Pair.of(detalleDTO.getId_producto(),detalleDTO.getCantidad());
-//		}).collect(Collectors.toList());
-//	}
-
-//	private void productosToDetallles(ArrayList<Entry<Producto, Integer>> productos) {
-//		List<Detalle> detalles;
-//		detalles = productos.stream().map(entry -> {
-//			return new Detalle(this,entry.getKey(),entry.getValue());
-//		}).collect(Collectors.toList());
-//		
-//		this.setDetalles(new ArrayList<Detalle>(detalles));
-//	}
 }
